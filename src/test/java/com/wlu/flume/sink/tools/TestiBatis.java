@@ -1,4 +1,4 @@
-package com.wlu.flume.sink.domain;
+package com.wlu.flume.sink.tools;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -1,4 +1,4 @@
-package com.wlu.flume.sink.domain;
+package com.wlu.flume.sink.tools;
 
 import java.sql.Connection;
 import java.sql.Statement;

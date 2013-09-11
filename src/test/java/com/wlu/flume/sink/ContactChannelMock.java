@@ -12,7 +12,7 @@ import com.dyuproject.protostuff.Schema;
 import com.dyuproject.protostuff.runtime.RuntimeSchema;
 import com.wlu.flume.sink.domain.Contact;
 
-public class ChannelMock extends MemoryChannel {
+public class ContactChannelMock extends MemoryChannel {
 
 	class xxx extends BasicTransactionSemantics {
 

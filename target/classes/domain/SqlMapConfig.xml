@@ -7,6 +7,7 @@
 
 	<typeAliases>
 		<typeAlias alias="Contact" type="com.wlu.flume.sink.domain.Contact" />
+		<typeAlias alias="TempData" type="com.wlu.flume.sink.domain.TempData" />
 	</typeAliases>
 
 	<environments default="development">
@@ -23,6 +24,7 @@
 
 	<mappers>
 		<mapper resource="com/wlu/flume/sink/domain/map/contact-map.xml" />
+		<mapper resource="com/wlu/flume/sink/domain/map/tempdata-map.xml" />
 	</mappers>
 
 </configuration>

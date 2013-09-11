@@ -5,16 +5,15 @@ import org.junit.Test;
 
 import com.wlu.flume.sink.domain.Contact;
 
-public class TestPojoJdbcSink {
+public class TestTempDataPojoJdbcSink {
 	@Test
 	public void testProcess(){
 		PojoJdbcSink<Contact> sink = new PojoJdbcSink<Contact>(Contact.class);
-		sink.setChannel(new ChannelMock());
+		sink.setChannel(new ContactChannelMock());
 		try {
 			sink.start();
 			sink.process();
 		} catch (EventDeliveryException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
