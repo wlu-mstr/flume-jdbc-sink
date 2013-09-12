@@ -1,4 +1,9 @@
 		steps of using PojoJdbcSink
+Purpose of the project:
+	
+	Send java pojo through Flume and data will be stored to Database.
+
+
 1. design com.package.pojo with constructor, getter, setter function;
 2. design com.package.dao.pojoDAO
 	2.1 in sqlMapConfig, add Alias, add xxx-map.xml path to sqlMapConfig;
