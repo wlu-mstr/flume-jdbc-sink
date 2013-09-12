@@ -17,12 +17,12 @@ import java.net.UnknownHostException;
  */
 public class SocketDataSource {
 	private Socket socket;
-	ObjectOutputStream dOut = null;
+	DataOutputStream dOut = null;
 
 	public SocketDataSource(String host, int port) throws UnknownHostException,
 			IOException {
 		socket = new Socket(host, port);
-		dOut = new ObjectOutputStream(socket.getOutputStream());
+		dOut = new DataOutputStream(socket.getOutputStream());
 	}
 
 	public void sendData(byte[] data) throws IOException {
@@ -32,8 +32,13 @@ public class SocketDataSource {
 	
 	public void close() throws IOException{
 		socket.close();
-		dOut.close();
+		//dOut.close();
 	}
 	
+	
+	public static void main(String args[]) throws UnknownHostException, IOException{
+		SocketDataSource src = new SocketDataSource("localhost", 44444);
+		src.sendData("hello #############################\n".getBytes());
+	}
 
 }

@@ -7,7 +7,6 @@ import com.wlu.flume.sink.domain.Contact;
 import com.wlu.flume.sink.domain.TempData;
 
 public class TestContactPojoJdbcSink {
-	@Test
 	public void testProcess(){
 		PojoJdbcSink<TempData> sink = new PojoJdbcSink<TempData>(TempData.class);
 		sink.setChannel(new TempDataChannelMock());

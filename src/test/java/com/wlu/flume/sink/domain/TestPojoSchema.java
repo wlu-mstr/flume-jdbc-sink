@@ -9,7 +9,6 @@ import com.dyuproject.protostuff.runtime.RuntimeSchema;
 
 public class TestPojoSchema {
 	
-	@Test
 	public void test1(){
 		Schema<Contact> schema = RuntimeSchema.getSchema(Contact.class);
 		Contact contact;

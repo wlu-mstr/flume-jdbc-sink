@@ -28,4 +28,9 @@ public class TempData {
 		this.value = value;
 	}
 
+	@Override
+	public String toString() {
+		return "TempData [timestamp=" + timestamp + ", value=" + value + "]";
+	}
+
 }

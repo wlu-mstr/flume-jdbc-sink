@@ -74,9 +74,14 @@ public class PojoJdbcSink<T> extends AbstractSink {
 
 			if (event != null) {
 				payload = event.getBody();
-
+				StringBuilder sb = new StringBuilder();
+				for(int i = 0; i < payload.length; i++){
+					sb.append(payload[i]+", ");
+				}
+				logger.info("get bytes as: " + sb.toString());
 				ProtobufIOUtil.mergeFrom(payload, pojo, schema);
 				pojodao.insert(pojo);
+				logger.info("pojo deserialized to " + pojo);
 			} else {
 				// No event found, request back-off semantics from the sink
 				// runner

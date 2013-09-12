@@ -4,12 +4,12 @@ import org.apache.flume.EventDeliveryException;
 import org.junit.Test;
 
 import com.wlu.flume.sink.domain.Contact;
+import com.wlu.flume.sink.domain.TempData;
 
 public class TestTempDataPojoJdbcSink {
-	@Test
 	public void testProcess(){
-		PojoJdbcSink<Contact> sink = new PojoJdbcSink<Contact>(Contact.class);
-		sink.setChannel(new ContactChannelMock());
+		TempDataJdbcSink sink = new TempDataJdbcSink();
+		sink.setChannel(new TempDataChannelMock());
 		try {
 			sink.start();
 			sink.process();
